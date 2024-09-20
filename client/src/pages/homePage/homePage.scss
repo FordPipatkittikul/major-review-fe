@@ -1,0 +1,43 @@
+// p{
+//     display: flex;
+//     justify-content: center;
+//     font-weight: bold;
+//     font-size: 3.5em;
+//     color: #1a1a1a;
+//     span{
+//         color: #ffcd00;
+//         margin-left: 4px
+//     }
+
+// }
+
+.my-paragraph {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 3.5em;
+    color: #1a1a1a;
+}
+  
+.highlight {
+    color: #ffcd00;
+    margin-left: 4px
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+.mid{
+    display: flex;
+    justify-content: center;
+    .majors{
+        background-color: #ffcd00;
+        border-radius: 5px;
+        box-shadow: 10px 5px 5px gray;
+        padding: 12px 24px;
+        margin: 20px;
+        color: #1a1a1a;
+    }
+}

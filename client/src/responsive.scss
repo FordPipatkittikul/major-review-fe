@@ -1,0 +1,23 @@
+/* Define a mixin named 'sm' for applying styles to small screens. 
+   width less than 738px. reusable*/
+   @mixin sm{
+    @media(max-width: 738px){
+        @content;
+    }
+}
+
+/* Define a mixin named 'md' for applying styles to medium screens. 
+   width less than 1024px. reusable*/
+@mixin md{
+    @media(max-width: 1024px){
+        @content;
+    }
+}
+
+/* Define a mixin named 'lg' for applying styles to large screens. 
+   width less than 1366px. reusable*/
+@mixin lg{
+    @media(max-width: 1366px){
+        @content;
+    }
+}
