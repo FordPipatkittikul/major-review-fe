@@ -65,8 +65,21 @@
             justify-content: center;
             border-bottom: 1px solid #ccc;
         }
+
         .review{
             border-bottom: 1px solid #ccc;
+            .middle-top{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .difficult{
+                    color: #ffcd00;
+                }
+            }
+            .content{
+                max-width: 600px;
+                word-wrap: break-word;
+            }
         }
     }
 

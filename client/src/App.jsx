@@ -1,19 +1,68 @@
 // App.js
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+
 import HomePage from "./pages/homePage/homepage";
-import AllMajors from "./pages/allmajor/allmajors";
+import AllMajors from "./pages/allMajor/allMajors";
 import MajorReview from "./pages/majorReview/majorReview";
+import WriteReview from "./pages/writeReview/writeReview";
+import LoginPage from "./pages/longinPage/loginPage";
+import RegisterPage from "./pages/registerPage/registerPage";
+import UsuagePage from "./pages/usuagePage/usuagePage";
+import AboutUsPage from "./pages/aboutUsPage/aboutusPage";
+import { Layout, RequireAuthLayout } from "./pages/layout/layout";
 
 function App() {
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout/>,
+      children: [
+        
+        {
+          path: "/",
+          element: <HomePage/>
+        },
+        {
+          path: "/majors",
+          element: <AllMajors/>
+        },
+        {
+          path: "/majors/:majorName",
+          element: <MajorReview />
+        },
+        {
+          path: "/review",
+          element: <WriteReview />
+        },
+        {
+          path: "/register",
+          element: <RegisterPage/>
+        },
+        {
+          path: "/login",
+          element: <LoginPage/>
+        },
+
+        {
+          path: "/aboutus",
+          element: <AboutUsPage/>
+        },
+
+        {
+          path: "/usuage",
+          element: <UsuagePage/>
+        },
+
+      ]
+    },
+
+  ]);
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/majors" element={<AllMajors />} />
-        <Route path="/majors/:majorName" element={<MajorReview />} /> 
-      </Routes>
-    </Router>
+    <RouterProvider router={router}/>
   );
 }
 
