@@ -34,7 +34,7 @@ function App() {
           element: <MajorReview />
         },
         {
-          path: "/review",
+          path: "/reviews/:majorName",
           element: <WriteReview />
         },
         {

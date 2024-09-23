@@ -30,7 +30,7 @@ function MajorReview() {
         </div>
 
         <div className='right'>
-          <Link to="/review" className="login">Write a Review</Link>
+          <Link to={`/reviews/${majorName.toLowerCase().replace(/\s+/g, '-')}`} className="login">Write a Review</Link>
         </div>
       </div>
 
@@ -53,7 +53,7 @@ function MajorReview() {
                 </div>
               ))
             ) : (
-              <p>No reviews yet for {majorName}. Be the first to <Link to="/review">write a review</Link>.</p>
+              <p>No reviews yet for {majorName}. Be the first to <Link to={`/reviews/${majorName.toLowerCase().replace(/\s+/g, '-')}`} className="login">Write a Review</Link>.</p>
             )}
         </div>
 
