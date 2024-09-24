@@ -3,11 +3,11 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 
-import HomePage from "./pages/homePage/homepage";
+import HomePage from "./pages/homePage/homePage";
 import AllMajors from "./pages/allMajor/allMajors";
 import MajorReview from "./pages/majorReview/majorReview";
 import WriteReview from "./pages/writeReview/writeReview";
-import LoginPage from "./pages/longinPage/loginPage";
+import LoginPage from "./pages/loginPage/loginPage";
 import RegisterPage from "./pages/registerPage/registerPage";
 import UsuagePage from "./pages/usuagePage/usuagePage";
 import AboutUsPage from "./pages/aboutUsPage/aboutusPage";

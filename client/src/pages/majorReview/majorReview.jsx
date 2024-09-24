@@ -5,8 +5,8 @@ import './majorReview.scss';
 // Will delete once we have database
 const reviews = {
   "💻-computer-science": [
-    { id: 1, author: "John", difficult:2,content: "Great program! Loved the professors" },
-    { id: 2, author: "Jane", difficult:3,content: "A lot of theory, but it's worth it." }
+    { id: 1, author: "", quality:5, difficult:2, content: "Great program! Loved the professors" },
+    { id: 2, author: "Jane", quality:5, difficult:3, content: "A lot of theory, but it's worth it." }
   ],
   "⚙️-mechanical-engineering": [
     { id: 1, author: "Alex", difficult:4, content: "Very challenging but rewarding." },
@@ -45,11 +45,12 @@ function MajorReview() {
             {majorReviews.length > 0 ? (
               majorReviews.map(review => (
                 <div key={review.id} className='review'>
+                  <h3>{review.author || anonymous}</h3>
                   <div className='middle-top'>
-                    <h3>By {review.author || anonymous}</h3>
-                    <h3 className='difficult'>Difficult: {review.difficult}/5</h3>
+                    <h3 className='quality'>QUALITY: {review.quality}/5</h3>
+                    <h3 className='difficult'>DIFFICULT: {review.difficult}/5</h3>
                   </div>
-                  <p className='content'>{review.content}</p>
+                  <p className='content'>Review: {review.content}</p>
                 </div>
               ))
             ) : (

@@ -9,7 +9,7 @@ function RegisterPage(){
             <h1>Create an Account</h1>
             <div className="registerPage">
                 <form className="formContainer">
-                    <input name="email" required minLength={4} maxLength={20} type="text" placeholder="Email" />
+                    <input name="email" required minLength={10} type="text" placeholder="Email" />
                     <input name="username" type="text" placeholder="Username"/>
                     <input name="password" required type="password" placeholder="Password"/>
                     <button>Register</button>

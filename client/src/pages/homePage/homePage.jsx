@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './homePage.scss';
 import ParticlesBg from 'particles-bg'
-import icon from '../../../public/icon';
+import icon from '../../lib/icon';
 
 const config = {
   num: [4, 7],
