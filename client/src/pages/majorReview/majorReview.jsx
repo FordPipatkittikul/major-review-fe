@@ -1,24 +1,12 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import './majorReview.scss';
+import { useParams, Link, useLoaderData } from 'react-router-dom';
 
-// Will delete once we have database
-const reviews = {
-  "💻-computer-science": [
-    { id: 1, author: "", quality:5, difficult:2, content: "Great program! Loved the professors" },
-    { id: 2, author: "Jane", quality:5, difficult:3, content: "A lot of theory, but it's worth it." }
-  ],
-  "⚙️-mechanical-engineering": [
-    { id: 1, author: "Alex", difficult:4, content: "Very challenging but rewarding." },
-    { id: 2, author: "Chris", difficult:4, content: "Hands-on experience is great!" }
-  ],
-};
+import './majorReview.scss';
 
 function MajorReview() {
 
+  const reviews = useLoaderData() || []
   const { majorName } = useParams(); // Get the dynamic major name from the URL
-  const formattedMajorName = majorName.toLowerCase().replace(/\s+/g, '-');
-  const majorReviews = reviews[formattedMajorName] || []; // Fallback to an empty array if no reviews exist
   const anonymous = "Anonymous"
   
   return (
@@ -42,15 +30,15 @@ function MajorReview() {
 
         <div className='right'>
           <h2>Student Reviews</h2>
-            {majorReviews.length > 0 ? (
-              majorReviews.map(review => (
-                <div key={review.id} className='review'>
-                  <h3>{review.author || anonymous}</h3>
-                  <div className='middle-top'>
-                    <h3 className='quality'>QUALITY: {review.quality}/5</h3>
-                    <h3 className='difficult'>DIFFICULT: {review.difficult}/5</h3>
-                  </div>
-                  <p className='content'>Review: {review.content}</p>
+            {reviews.length > 0 ? (
+              reviews.map((review, index) => (
+                <div key={`${review.reviewId}-${index}`} className='review'>
+                    <h3>{review.user.name || anonymous}</h3>
+                      <div className='middle-top'>
+                          <h3 className='quality'>QUALITY: {review.quality}/5</h3>
+                          <h3 className='difficult'>DIFFICULT: {review.difficulty}/5</h3>
+                      </div>
+                    <p className='content'>Review: {review.review}</p>
                 </div>
               ))
             ) : (

@@ -24,8 +24,8 @@ function HomePage() {
   return (
     <div>
       <ParticlesBg type="custom" config={config} bg={true} />
-      <p class="my-paragraph">
-        RateMy <span class="highlight">Major</span>
+      <p className="my-paragraph">
+        RateMy <span className="highlight">Major</span>
       </p>
       <h1>Rate Your Major: Share Your Experience</h1>
       <div className='mid'>

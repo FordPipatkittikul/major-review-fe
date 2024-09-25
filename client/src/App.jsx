@@ -12,6 +12,7 @@ import RegisterPage from "./pages/registerPage/registerPage";
 import UsuagePage from "./pages/usuagePage/usuagePage";
 import AboutUsPage from "./pages/aboutUsPage/aboutusPage";
 import { Layout, RequireAuthLayout } from "./pages/layout/layout";
+import { reviewloader } from "./lib/loaders";
 
 function App() {
 
@@ -31,11 +32,13 @@ function App() {
         },
         {
           path: "/majors/:majorName",
-          element: <MajorReview />
+          element: <MajorReview />,
+          loader: reviewloader
         },
         {
           path: "/reviews/:majorName",
-          element: <WriteReview />
+          element: <WriteReview />,
+          loader: reviewloader
         },
         {
           path: "/register",
