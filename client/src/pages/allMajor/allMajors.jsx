@@ -152,7 +152,7 @@ function AllMajors() {
       <h1>ALL Majors</h1>
       <ul>
         {majors.map((major) => (
-          <li key={major}>
+          <li className="eachmajor" key={major}>
             <Link to={`/majors/${major.toLowerCase().replace(/\s+/g, '-')}`}>
               {major}
             </Link>

@@ -1,8 +1,4 @@
-// p {
-//     font-size: 3.2em;
-//     color: #213547;
-//     font-weight: bold;
-// }
+@import "../../responsive.scss";
 
 nav{
     height: 100px;
@@ -10,6 +6,18 @@ nav{
     display: flex;
     align-items: center;
     margin: -8px;
+
+    a{
+        transition: all 0.4s ease;
+
+        @include sm{
+            display: none;
+        }
+
+        &:hover{
+          scale: 1.4;  
+        }
+    }
 
     .left{
         flex: 0.7;
@@ -54,6 +62,69 @@ nav{
             border-radius: 5px;
             box-shadow: 10px 5px 5px gray;
             
+        }
+
+        /* Default styles (for larger screens) */
+        .menuIcon {
+            display: none; /* Hide menu icon by default */
+
+            img{
+                width: 36px;
+                height: 36px;
+                cursor: pointer;  
+            }
+        }
+
+        .menu {
+            display: none; /* Hide menu by default */
+        }
+
+        /* Styles for screens with max-width of 738px */
+        @media (max-width: 738px) {
+            .menuIcon {
+                display: block; /* Show menu icon */
+                cursor: pointer; /* Add cursor pointer for interaction */
+            }
+
+            .menu {
+                display: block; /* Show menu when it's open */
+                position: absolute; /* Position the menu as needed */
+                top: 100px; /* Adjust as necessary */
+                background-color: rgba(255, 255, 255, 0.9); /* Background color of the menu */
+                width: 30%; /* Full width */
+                z-index: 100; /* Ensure it appears above other content */
+            }
+
+            .menu.active {
+                visibility: hidden; // Initially hidden
+                opacity: 0;
+                display: block; /* Show the active menu */
+            }
+
+            /* Optional styles for menu links */
+            .menu a {
+                display: block; /* Make links block-level */
+                padding: 10px; /* Add padding for touch targets */
+                color: black; /* Text color */
+                text-decoration: none; /* Remove underline */
+            }
+
+            .menu a.disabled {
+                color: gray; /* Disabled link color */
+                pointer-events: none; /* Prevent clicking */
+            }
+
+            .menu p {
+                margin: 0; /* Remove margin from paragraph */
+                font-weight: bold; /* Optional: Make the title bold */
+            }
+        }
+
+        /* Optional styles for larger screens to hide menu */
+        @media (min-width: 739px) {
+            .menu {
+                display: none; /* Ensure menu is hidden */
+            }
         }
 
     }

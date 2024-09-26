@@ -27,6 +27,7 @@ function MajorReview() {
 
         <div className='left'>
           <Graph reviews={reviews}/>
+          <h2>Please note that this is a people's review. We recommend using additional sources to make a well-informed decision.</h2>
         </div>
 
         <div className='right'>
