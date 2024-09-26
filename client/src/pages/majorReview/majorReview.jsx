@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link, useLoaderData } from 'react-router-dom';
 
+import Graph from '../../components/graph/graph';
 import './majorReview.scss';
 
 function MajorReview() {
@@ -25,7 +26,7 @@ function MajorReview() {
       <div className='middle'>
 
         <div className='left'>
-          <h1>OverView</h1>
+          <Graph reviews={reviews}/>
         </div>
 
         <div className='right'>
