@@ -1,8 +1,12 @@
-import React from 'react';
+import {React, useState} from 'react';
 import { Link } from 'react-router-dom';
+
+import SearchBar from '../../components/searchbar/SearchBar';
 import './allMajor.scss';
 
 function AllMajors() {
+
+  const [itemm,setItem] = useState("");
   
   const majors = [
     "💰 Accounting",
@@ -149,9 +153,14 @@ function AllMajors() {
 
   return (
     <div>
-      <h1>ALL Majors</h1>
+      <SearchBar item={itemm} setItem={setItem}/>
       <ul>
-        {majors.map((major) => (
+        {majors.filter((item) => {
+          const matchesTitle = item.toLowerCase().includes(itemm.toLowerCase());
+          return itemm.toLowerCase() === ""
+          ? item
+          : (matchesTitle)
+        }).map((major) => (
           <li className="eachmajor" key={major}>
             <Link to={`/majors/${major.toLowerCase().replace(/\s+/g, '-')}`}>
               {major}

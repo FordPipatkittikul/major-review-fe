@@ -1,0 +1,44 @@
+.searchBar{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h1{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    b{
+        color: #ffcd00;
+    }
+
+    .item{
+        display: flex;
+        align-items: center;
+        gap: 2px;
+
+        label{
+            font-size: 15px;
+        }
+
+        input{
+            width: 100px;
+            padding: 10px;
+            border: 3px solid #34d60c;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+    }
+
+    .top{
+        display: flex;
+        justify-content: center;
+        input{
+            width: 100%;
+        }
+
+    }
+    
+}
