@@ -33,7 +33,7 @@ function WriteReview(){
                 review,
                 currentUser
             })
-            navigate("/majors");
+            navigate(`/majors/${majorName.toLowerCase().replace(/\s+/g, '-')}`);
         } catch(err){
             setError(err.response.data.msg)
         } finally{

@@ -70,78 +70,24 @@
     .left {
         flex: 2;
         padding-left: 20px;
-        
-        height: 100%;
         width: 580px;
+        span{
+            color: #ffcd00;;
+        }
     }
     
     .right {
         flex: 2;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        width: 100%;
-        padding: 20px;
-        border: 2px solid #ccc; /* Add border */
-        border-radius: 8px; /* Rounded corners */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        margin: 10px; /* Spacing between cards */
-        overflow-y: scroll;
-        
-
-        h2 {
-            display: flex;
-            justify-content: center;
-            border-bottom: 1px solid #ccc;
-        }
-
-        .review {
-            border-bottom: 1px solid #ccc;
-            padding: 10px 0;
-            
-            .middle-top {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: flex-start;
-                gap: 50px;
-
-                .quality {
-                    color: #ffcd00;
-                }
-                .difficult {
-                    color: #ffcd00;
-                }
-            }
-
-            .content {
-                max-width: 100%;
-                word-wrap: break-word;
-            }
-        }
     }
-
+    
     @include sm {
         flex-direction: column;
         .left, .right {
             width: 100%;
         }
 
-        .right {
-            padding: 10px;
-            margin: 0;
-
-            h2 {
-                font-size: 18px;
-            }
-
-            .review {
-                .middle-top {
-                    gap: 20px;
-                }
-                .content {
-                    font-size: 14px;
-                }
-            }
+        .right {    
+            width: 550px;
         }
     }
 
@@ -154,6 +100,57 @@
     @include lg {
         .right {
             padding: 18px;
+        }
+    }
+}
+
+
+.bottom{
+    display: flex;
+    justify-content: center;
+    .reviewb{
+
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 80%;
+        padding: 20px;
+        border: 2px solid #ccc; /* Add border */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin: 10px; /* Spacing between cards */
+        
+
+        h2 {
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid #ccc;
+            color: #ffcd00;
+        }
+
+        .review {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+            
+            .middle-top {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: 50px;
+
+                span{
+                    color: #ffcd00;
+                }
+            }
+
+            .content {
+                max-width: 100%;
+                word-wrap: break-word;
+            }
+        }
+
+        @include sm {
+            margin-top: 40px;
         }
     }
 }

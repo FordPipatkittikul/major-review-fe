@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../context/authContext';
 import { useContext, useState } from "react";
 
@@ -6,6 +6,8 @@ import apiRequest from "../../lib/apiRequest";
 import './navbar.scss'
 
 function Navbar() {
+
+    const navigate = useNavigate();
     const [open,setOpen] = useState(false);
     const {currentUser, updateUser} = useContext(AuthContext);
     const [isLoading,setIsLoading] = useState(false);
@@ -25,6 +27,7 @@ function Navbar() {
         setIsLoading(false)
       }
     }
+
     return (
       <nav>
         <div className='left'>
