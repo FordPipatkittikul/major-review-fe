@@ -44,8 +44,8 @@ function MajorReview() {
             {reviews.length > 0 ? (
               reviews.map((review, index) => (
                 <div key={`${review.reviewId}-${index}`} className='review'>
-                    <h3>Name: {review.user.name || anonymous}</h3>
-                      <div className='middle-top'>
+                      <div className='bottom-top'>
+                          <h3>Name: {review.user.name || anonymous}</h3>
                           <h3><span>QUALITY: </span>{review.quality}/5</h3>
                           <h3><span>DIFFICULT: </span>{review.difficulty}/5</h3>
                       </div>

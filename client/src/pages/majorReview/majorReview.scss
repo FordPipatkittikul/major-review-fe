@@ -108,6 +108,7 @@
 .bottom{
     display: flex;
     justify-content: center;
+
     .reviewb{
 
         display: flex;
@@ -124,19 +125,25 @@
         h2 {
             display: flex;
             justify-content: center;
-            border-bottom: 1px solid #ccc;
             color: #ffcd00;
         }
 
         .review {
-            border-bottom: 1px solid #ccc;
-            padding: 10px 0;
+            border: 2px solid #ffcd00; /* Add border */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px; /* Spacing between cards */
+            padding: 10px;
             
-            .middle-top {
+            .bottom-top {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: flex-start;
-                gap: 50px;
+                gap: 30px;
+                border-bottom: 2px solid #10cee7;
+                @include sm {
+                    display: flex;
+                    justify-content: center;
+                }
 
                 span{
                     color: #ffcd00;

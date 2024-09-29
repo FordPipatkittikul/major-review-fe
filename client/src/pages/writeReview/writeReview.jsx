@@ -60,7 +60,7 @@ function WriteReview(){
         )
         :
         (
-            <Link to="/login"><h1>You need to Login First before writing a reviews</h1></Link>
+            <Link className="needLogin" to="/login"><h1>You need to login first before writing a review</h1></Link>
         )
 
     )
