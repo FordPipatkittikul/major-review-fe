@@ -31,7 +31,7 @@ function Navbar() {
     return (
       <nav>
         <div className='left'>
-        <Link to="/"><p>RateMy<span>Major</span></p></Link>
+        <Link to="/"><p>RateMy<span>Major</span>💭</p></Link>
         </div>
         <div className='right'>
 

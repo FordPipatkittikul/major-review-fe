@@ -28,3 +28,11 @@ h1{
         color: #1a1a1a;
     }
 }
+
+a{
+    transition: all 0.4s ease;
+
+    &:hover{
+      scale: 1.4;  
+    }
+}
