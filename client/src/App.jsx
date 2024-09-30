@@ -11,7 +11,7 @@ import LoginPage from "./pages/loginPage/loginPage";
 import RegisterPage from "./pages/registerPage/registerPage";
 import UsuagePage from "./pages/usuagePage/usuagePage";
 import AboutUsPage from "./pages/aboutUsPage/aboutusPage";
-import { Layout, RequireAuthLayout } from "./pages/layout/layout";
+import { Layout } from "./pages/layout/layout";
 import { reviewloader } from "./lib/loaders";
 
 function App() {

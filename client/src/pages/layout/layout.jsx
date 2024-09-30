@@ -17,12 +17,12 @@ function Layout(){
     )
   }
 
-function RequireAuthLayout() {
-    return (
-        <div>
+// function RequireAuthLayout() {
+//     return (
+//         <div>
 
-        </div>
-    )
-}
+//         </div>
+//     )
+// }
 
-export {Layout,RequireAuthLayout};
+export {Layout};
