@@ -19,7 +19,7 @@ function MajorReview() {
         </div>
 
         <div className='right'>
-          <Link to={`/reviews/${majorName.toLowerCase().replace(/\s+/g, '-')}`} className="login">Write a Review</Link>
+          <Link to={`/reviews/${majorName.toLowerCase().replace(/\s+/g, '-')}`} className="writeReview">Write a Review</Link>
         </div>
       </div>
 
