@@ -116,9 +116,9 @@
         height: 100%;
         width: 80%;
         padding: 20px;
-        border: 2px solid #ccc; /* Add border */
-        border-radius: 20px; /* Rounded corners */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        
+        
+        
         margin: 10px; /* Spacing between cards */
         
 
@@ -129,17 +129,17 @@
         }
 
         .review {
-            border: 2px solid #ffcd00; /* Add border */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border: 1px solid;
+            box-shadow: 5px 10px rgba(0, 0, 0, 0.1);
             margin: 10px; /* Spacing between cards */
             padding: 10px;
-            
+            border-radius: 10px;
             .bottom-top {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: flex-start;
                 gap: 30px;
-                border-bottom: 2px solid #10cee7;
+                border-bottom: 2px solid #ffcd00;
                 @include sm {
                     display: flex;
                     justify-content: center;

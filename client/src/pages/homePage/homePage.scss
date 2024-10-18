@@ -26,13 +26,10 @@ h1{
         padding: 12px 24px;
         margin: 20px;
         color: #1a1a1a;
-    }
-}
+        transition: all 0.4s ease;
 
-a{
-    transition: all 0.4s ease;
-
-    &:hover{
-      scale: 1.4;  
+        &:hover{
+            scale: 1.4;  
+        }
     }
 }
